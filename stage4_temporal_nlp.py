@@ -360,6 +360,13 @@ def run_stage4() -> Dict[str, Any]:
 
     df_media, df_impact = load_inputs(MEDIA_CSV, IMPACT_CSV)
 
+    # NEW LOGGING: Dynamically detect and announce the events found
+    unique_events = df_media["event_label"].dropna().unique()
+    print(f"\nFound {len(unique_events)} unique events in {MEDIA_CSV.name}:")
+    for ev in unique_events:
+        print(f"  - {ev}")
+    print("-" * 60)
+
     # Temporal
     df_enriched, peak_by_event = compute_temporal_features(df_media)
 
@@ -382,6 +389,7 @@ def run_stage4() -> Dict[str, Any]:
     losses_by_event: Dict[str, List[str]] = defaultdict(list)
     relief_funds_by_event: Dict[str, List[str]] = defaultdict(list)
 
+    print("\nRunning NLP extraction (NER & Sentiment) on all reports...")
     for idx, row in df_enriched.iterrows():
         headline = str(row.get("headline", "") or "")
         summary = str(row.get("summary", "") or "")
@@ -471,9 +479,11 @@ def run_stage4() -> Dict[str, Any]:
     df_entities.to_csv(OUT_ENTITIES, index=False)
     OUT_EVENT_SUMMARY.write_text(json.dumps(event_summary, indent=2), encoding="utf-8")
 
+    print("\n" + "=" * 60)
     print(f"Wrote enriched media CSV: {OUT_ENRICHED}")
     print(f"Wrote entities CSV: {OUT_ENTITIES}")
     print(f"Wrote event summary JSON: {OUT_EVENT_SUMMARY}")
+    print("=" * 60)
 
     return event_summary
 

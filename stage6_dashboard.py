@@ -36,7 +36,7 @@ def load_data() -> Dict[str, Any]:
     }
 
 
-def build_dual_timeline_figure(
+def build_multi_event_timeline_figure(
     media_enriched: pd.DataFrame,
     events: List[str] | None = None,
     date_range: tuple[pd.Timestamp, pd.Timestamp] | None = None,
@@ -75,8 +75,12 @@ def build_dual_timeline_figure(
         y="daily_report_count",
         color="event_label",
         markers=True,
-        title=f"Dual Timeline – Daily News Volume by Event{subtitle}",
-        labels={"pub_date": "Date", "daily_report_count": "Number of reports"},
+        title=f"Multi-Event Timeline – Daily News Volume{subtitle}",
+        labels={
+            "pub_date": "Date",
+            "daily_report_count": "Number of reports",
+            "event_label": "Event",
+        },
     )
     fig.update_layout(
         legend_title_text="Event",
@@ -147,13 +151,14 @@ def build_resilience_radar_figure(
                 theta=cats_closed,
                 fill="toself",
                 name=row["event_label"],
+                opacity=0.6,  # Lowered opacity so overlapping shapes are visible
             )
         )
 
     fig.update_layout(
         polar=dict(radialaxis=dict(visible=True, range=[0, 1])),
         showlegend=True,
-        title="Resilience Radar – Relative Magnitude, Exposure, Coverage, Vulnerability",
+        title="Resilience Radar – Cross-Regional Comparison",
     )
     return fig
 
@@ -174,12 +179,12 @@ def build_event_volume_bar_figure(media_enriched: pd.DataFrame) -> go.Figure:
         counts,
         x="event_label",
         y="num_reports",
+        color="event_label",
         title="Media Volume by Event (filtered window)",
         labels={"event_label": "Event", "num_reports": "Number of reports"},
     )
     fig.update_layout(
-        xaxis_tickangle=-35,
-        margin=dict(l=40, r=10, t=60, b=120),
+        xaxis_tickangle=-25, margin=dict(l=40, r=10, t=60, b=120), showlegend=False
     )
     return fig
 
@@ -214,7 +219,11 @@ def build_sentiment_over_time_figure(media_enriched: pd.DataFrame) -> go.Figure:
         color="event_label",
         markers=True,
         title="Average Headline Sentiment Over Time",
-        labels={"pub_date": "Date", "avg_sentiment": "Avg sentiment (compound)"},
+        labels={
+            "pub_date": "Date",
+            "avg_sentiment": "Avg sentiment (compound)",
+            "event_label": "Event",
+        },
     )
     fig.update_layout(
         legend_title_text="Event",
@@ -270,8 +279,10 @@ def main():
     st.title("Disaster Pulse Dashboard")
     st.markdown(
         """
-This dashboard compares **Event A (Indonesia 2018)** and **Event B (Myanmar 2025)**
-across media response and impact dimensions.
+This dashboard compares **four major seismic events** across Indonesia and Myanmar 
+to analyze how media response aligns with actual human and economic impact.
+- **Historical:** Indonesia 2018 (M7.5) & Myanmar 2016 (M6.8)
+- **Recent:** Indonesia 2024 (M5.0) & Myanmar 2025 (M7.7)
 """
     )
 
@@ -288,7 +299,9 @@ across media response and impact dimensions.
     # Sidebar – primary event selection and rich textual details.
     st.sidebar.title("Event Details")
     event_labels = impact_df["event_label"].tolist()
-    selected = st.sidebar.selectbox("Select event", event_labels)
+    selected = st.sidebar.selectbox(
+        "Select event to view deep dive details", event_labels
+    )
 
     st.sidebar.markdown("**Impact metrics (EM-DAT/HDX):**")
     impact_row = impact_df.set_index("event_label").loc[selected].to_dict()
@@ -387,8 +400,8 @@ across media response and impact dimensions.
         st.info("Select at least one event to render the charts.")
         return
 
-    # Dual timeline – media volume over time.
-    st.subheader("Dual Timeline – Media Volume Over Time")
+    # Multi-Event timeline – media volume over time.
+    st.subheader("Multi-Event Timeline – Media Volume Over Time")
     filtered_media = media_enriched.copy()
     if date_range:
         start_ts, end_ts = date_range
@@ -401,7 +414,7 @@ across media response and impact dimensions.
     if filtered_media.empty:
         st.info("No media reports for the selected filters.")
     else:
-        fig_timeline = build_dual_timeline_figure(
+        fig_timeline = build_multi_event_timeline_figure(
             filtered_media,
             events=selected_events,
             date_range=None,
@@ -439,7 +452,7 @@ across media response and impact dimensions.
     with st.expander("How to read this dashboard"):
         st.markdown(
             """
-            - **Dual Timeline** shows comparative media trajectories across events, with optional
+            - **Multi-Event Timeline** shows comparative media trajectories across all events, with optional
               smoothing to reveal structural patterns instead of daily noise.
             - **Resilience Radar** normalises magnitude, exposure, coverage, and a vulnerability
               proxy so you can compare profile shapes rather than raw scales.

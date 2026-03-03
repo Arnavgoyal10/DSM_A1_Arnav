@@ -7,90 +7,92 @@ Using current outputs:
 
 Computed metrics:
 
-Event A – Indonesia 2018 (Central Sulawesi Earthquake and Tsunami)
+Event A1 – Indonesia 2018 (Central Sulawesi Earthquake and Tsunami)
 - event_label: Indonesia_2018_09_28_M7.5
-- total_reports ≈ 500
+- total_reports = 370
 - total_affected = 2,000,000
-- total_damages_usd ≈ 1.45B
+- total_damages_usd = 1.45B
 - economic_damage_per_capita ≈ 725 USD per affected person
-- Forgotten Crisis Index (news volume per affected person) =
-  total_reports / total_affected ≈ 500 / 2,000,000 ≈ 0.00025
+- Forgotten Crisis Index (reports per affected person) = 370 / 2,000,000 ≈ 0.000185
 
-Event B – Myanmar 2025 (Myanmar Earthquake)
+Event A2 – Myanmar 2025 (Myanmar Earthquake)
+- event_label: Indonesia_2024_09_M5.0
+- total_reports = 315
+- total_affected = 150,209
+- total_damages_usd = 70.0M
+- economic_damage_per_capita ≈ 466 USD per affected person
+- Forgotten Crisis Index = 315 / 150,209 ≈ 0.002097
+
+
+Event B1 – Myanmar 2016 (Chauk / Bagan Earthquake)
+- event_label: Myanmar_2016_08_24_M6.8
+- total_reports = 366
+- total_affected = 1,152
+- total_damages_usd = 10.0M
+- economic_damage_per_capita ≈ 8,681 USD per affected person
+- Forgotten Crisis Index = 366 / 1,152 ≈ 0.317708
+
+
+Event B2 – Myanmar 2025 (Mandalay Earthquake)
 - event_label: Myanmar_2025_03_M7.7
-- total_reports ≈ 476
-- total_affected ≈ 1,355,104
-- total_damages_usd ≈ 11.0B
+- total_reports = 221
+- total_affected = 1,355,104
+- total_damages_usd = 11.0B
 - economic_damage_per_capita ≈ 8,117 USD per affected person
-- Forgotten Crisis Index (news volume per affected person) =
-  total_reports / total_affected ≈ 476 / 1,355,104 ≈ 0.0003513
+- Forgotten Crisis Index = 221 / 1,355,104 ≈ 0.000163
 
 Forgotten Crisis Index interpretation:
-- The index measures how much media coverage each affected person “receives”:
-  FCI = total_reports / total_affected.
-- Indonesia 2018: FCI ≈ 0.00025
-- Myanmar 2025: FCI ≈ 0.00035
-- Myanmar’s crisis has more news per affected person, so Indonesia 2018 is relatively
-  more “forgotten”: more people affected per unit of coverage.
+- The index measures how much media coverage each affected person “receives”: FCI = total_reports / total_affected.
+- Most "Forgotten": Myanmar 2025 (FCI ≈ 0.00016) and Indonesia 2018 (FCI ≈ 0.00018). Both were massive, catastrophic events 
+  affecting millions, yet the media volume was highly diluted across the vast affected populations.
+- Most "Amplified": Myanmar 2016 (FCI ≈ 0.317) and Indonesia 2024 (FCI ≈ 0.002). These events affected drastically fewer people 
+  (only 1,152 for Myanmar 2016) but still commanded hundreds of media reports.
+- Insight: Media volume has a "floor." Even minor earthquakes trigger a baseline level of institutional reporting 
+  (e.g., USGS alerts, initial AHA center situation reports). However, media volume does not scale proportionally when a disaster is thousands of times larger.
+
 
 Vulnerability / coping capacity proxy:
-- We use economic_damage_per_capita (total_damages_usd / total_affected) as a proxy
-  for both vulnerability and coping capacity (higher damage per affected person suggests
-  higher-value assets exposed and/or weaker capacity to prevent losses):
-  - Indonesia 2018: ~725 USD per affected person
-  - Myanmar 2025: ~8,117 USD per affected person
-- Myanmar’s event appears economically more intense per affected person, indicating
-  greater economic vulnerability or lower coping capacity, even though media coverage
-  per affected person is also higher than for Indonesia.
+- We use economic_damage_per_capita (total_damages_usd / total_affected) as a proxy for both vulnerability and coping capacity.
+- Indonesia (Both Events): Damage ranges from ~$466 to ~$725 per affected person.
+- Myanmar (Both Events): Damage ranges from ~$8,117 to ~$8,681 per affected person.
+- Insight: There is a stark regional divide. Myanmar's earthquakes consistently result in over 10x more economic 
+  damage per affected person than Indonesia's. This suggests much higher structural vulnerability, more expensive asset 
+  destruction relative to population size, or severely limited local coping capacities in Myanmar across the last decade.
 
 --------------------------------------------------------------------------------
 Sentiment & tone: historical vs current (analytical vs alarmist)
 --------------------------------------------------------------------------------
-We compare the measured headline sentiment (VADER compound) and its volatility
-between Event A and Event B using the exact values from `stage4_event_summary.json`.
+We compare the measured headline sentiment (VADER compound) and its volatility across the four events.
+- Indonesia (2018 vs 2024): 2018: mean = -0.090, std = 0.346 - 2024: mean = -0.099, std = 0.345
 
-- Indonesia 2018 (historical, 445 headlines):
-  - mean compound sentiment = **-0.0866**
-  - standard deviation (volatility) = **0.3444**
-  - interpretation: tone is on average mildly negative, with a fairly wide spread
-    across headlines (mix of sharply negative and more neutral pieces).
+Tone is highly negative and volatile. The 2024 event actually generated slightly more negative headlines on average than 2018.
+- Myanmar (2016 vs 2025): 2016: mean = -0.080, std = 0.323 - 2025: mean = -0.083, std = 0.324
 
-- Myanmar 2025 (recent, 216 headlines):
-  - mean compound sentiment = **-0.0638**
-  - standard deviation (volatility) = **0.3190**
-  - interpretation: still negative on average, but less negative and slightly
-    less volatile than Indonesia 2018.
+Tone is moderately negative, with a tighter spread (less volatility). The sentiment remained incredibly stable across a 9-year gap.
 
-Interpretation of the change:
-- Both disasters are framed in overall negative terms, but headlines around
-  **Myanmar 2025** are closer to neutral and show a tighter spread than those
-  for **Indonesia 2018**.
-- This points to a modest shift away from highly alarmist, emotionally charged
-  language toward a more measured/analytical style for the recent event:
-  fewer extreme sentiment swings and slightly more neutral framing, even though
-  the underlying economic impact is much larger.
+Interpretation: The data shows a stronger regional reporting bias than a temporal one. 
+Reports regarding Indonesian disasters are consistently framed with more negative, alarming, and volatile language. 
+Myanmar reports are slightly more neutral and analytical. Time did not mellow the tone; geography dictated it.
 
 --------------------------------------------------------------------------------
 Alternative comparative insight (using existing data only, no GDACS)
 --------------------------------------------------------------------------------
-We do not have GDACS alert level or formal coping capacity, so we derive an
-alternative insight from magnitude, impact, and media:
 
-Insight – Magnitude, economic intensity, and media focus:
-- Event B (Myanmar 2025) has higher magnitude (7.7 vs 7.5) and much higher
-  total damage (approx 11B vs approx 1.45B USD) and economic damage per capita
-  (approx 8,117 vs approx 725 USD per affected person). Death tolls are similar
-  (approx 3.8k vs approx 4.1k).
-- Despite that, total media volume (report count) is almost the same for both
-  events (approx 476 vs approx 500). Numerically, Indonesia 2018 gets
-  ~3.4×10⁻⁷ reports per USD of damage (≈500 / 1.45B), while Myanmar 2025 gets
-  ~4.3×10⁻⁸ reports per USD (≈476 / 11.0B) — around **8× less coverage per
-  dollar of damage** for the more recent, more intense event.
-- Interpretation: within this two‑event sample, the historical Indonesia disaster
-  appears to have been over‑represented in media relative to its economic scale,
-  while the current Myanmar event looks under‑covered given how concentrated and
-  costly the impact is. This shows that equal raw news volume does *not* imply
-  equal attention to human or economic impact; pairing media metrics with impact
-  indicators (FCI, economic_damage_per_capita) is essential to surface these
-  imbalances.
+- By looking at the ratio of media reports to total economic damages, we can see if media attention follows the money:
+
+Myanmar 2016: $10M damages, 366 reports (3.66 x 10⁻⁵ reports per USD)
+
+Indonesia 2024: $70M damages, 315 reports (4.50 x 10⁻⁶ reports per USD)
+
+Indonesia 2018: $1.45B damages, 370 reports (2.55 x 10⁻⁷ reports per USD)
+
+Myanmar 2025: $11.0B damages, 221 reports (2.01 x 10⁻⁸ reports per USD)
+
+-  Insight – The Disconnect of Scale: The most economically devastating event in the dataset by a wide margin 
+  (Myanmar 2025, with $11B in damages) generated the lowest absolute number of media reports (221). 
+  Conversely, the event with the least economic damage (Myanmar 2016, $10M) generated significantly more coverage (366 reports).
+
+- Conclusion: Equal raw news volume does not imply equal attention to human or economic impact. 
+  Relying purely on raw report counts creates a dangerous illusion of parity. Pairing media metrics with hard impact 
+  indicators (like FCI and Coverage per USD) is essential to surface these massive imbalances in humanitarian attention.
 

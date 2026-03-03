@@ -21,7 +21,9 @@ class EventSpec:
     magnitude: Optional[float] = None
 
 
-EVENT_A = EventSpec(
+# Region 1 – Indonesia
+# Historical (A1): 2018 Sulawesi Earthquake (already used)
+EVENT_A1 = EventSpec(
     label="Indonesia_2018_09_28_M7.5",
     country="Indonesia",
     disaster_type="Earthquake",
@@ -30,8 +32,29 @@ EVENT_A = EventSpec(
     day=28,
     magnitude=7.5,
 )
+# Recent (A2): 2024 West Java / Bandung Earthquake (M 5.0, approximate date in Sept 2024)
+EVENT_A2 = EventSpec(
+    label="Indonesia_2024_09_M5.0",
+    country="Indonesia",
+    disaster_type="Earthquake",
+    year=2024,
+    month=9,
+    magnitude=5.0,
+)
 
-EVENT_B = EventSpec(
+# Region 2 – Myanmar
+# Historical (B1): 2016 Chauk / Bagan Earthquake (M 6.8, 24 August 2016)
+EVENT_B1 = EventSpec(
+    label="Myanmar_2016_08_24_M6.8",
+    country="Myanmar",
+    disaster_type="Earthquake",
+    year=2016,
+    month=8,
+    day=24,
+    magnitude=6.8,
+)
+# Recent (B2): 2025 Mandalay Earthquake (already used)
+EVENT_B2 = EventSpec(
     label="Myanmar_2025_03_M7.7",
     country="Myanmar",
     disaster_type="Earthquake",
@@ -39,6 +62,8 @@ EVENT_B = EventSpec(
     month=3,
     magnitude=7.7,
 )
+
+EVENTS: List[EventSpec] = [EVENT_A1, EVENT_A2, EVENT_B1, EVENT_B2]
 
 """
 print(
@@ -303,15 +328,13 @@ def run_stage2_emdat_impact() -> pd.DataFrame:
     df = download_emdat_table(session, res_url, res_fmt)
     print(f"Loaded EM-DAT table: shape={df.shape}")
 
-    print("Selecting Event A row...")
-    row_a = select_emdat_row_for_event(df, EVENT_A)
-    print("Selecting Event B row...")
-    row_b = select_emdat_row_for_event(df, EVENT_B)
+    metrics: List[Dict[str, Any]] = []
+    for ev in EVENTS:
+        print(f"Selecting row for event: {ev.label}...")
+        row = select_emdat_row_for_event(df, ev)
+        metrics.append(extract_impact_metrics(row, ev, list(df.columns)))
 
-    metrics_a = extract_impact_metrics(row_a, EVENT_A, list(df.columns))
-    metrics_b = extract_impact_metrics(row_b, EVENT_B, list(df.columns))
-
-    out_df = pd.DataFrame([metrics_a, metrics_b])
+    out_df = pd.DataFrame(metrics)
     print("\nStage 2 EM-DAT impact metrics (from HDX/EM-DAT data):")
     print(out_df)
 

@@ -1,7 +1,10 @@
+import argparse
+import sys
 import time
 from dataclasses import dataclass
 from typing import Any, Dict, List, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
 
 import pandas as pd
 import requests
@@ -13,26 +16,45 @@ from urllib.parse import quote_plus
 class EventSpec:
     label: str
     name: str
-    date: str
+    date: str  # ISO string
     location: str
     hazard_type: str
 
 
-EVENT_A = EventSpec(
+# Region 1 – Indonesia
+EVENT_A1 = EventSpec(
     label="Indonesia_2018_09_28_M7.5",
     name="2018 Central Sulawesi Earthquake and Tsunami",
     date="2018-09-28",
     location="Indonesia",
     hazard_type="Earthquake",
 )
+EVENT_A2 = EventSpec(
+    label="Indonesia_2024_09_M5.0",
+    name="2024 West Java / Bandung Earthquake",
+    date="2024-09-01",  # approximate date in Sept 2024
+    location="Indonesia",
+    hazard_type="Earthquake",
+)
 
-EVENT_B = EventSpec(
-    label="Myanmar_2025_03_M7.7",
-    name="2025 Myanmar Earthquake",
-    date="2025-03-01",
+# Region 2 – Myanmar
+EVENT_B1 = EventSpec(
+    label="Myanmar_2016_08_24_M6.8",
+    name="2016 Chauk / Bagan Earthquake",
+    date="2016-08-24",
     location="Myanmar",
     hazard_type="Earthquake",
 )
+EVENT_B2 = EventSpec(
+    label="Myanmar_2025_03_M7.7",
+    name="2025 Mandalay Earthquake",
+    date="2025-03-01",  # approximate month; exact day unknown
+    location="Myanmar",
+    hazard_type="Earthquake",
+)
+
+EVENTS: List[EventSpec] = [EVENT_A1, EVENT_A2, EVENT_B1, EVENT_B2]
+EVENT_MAP: Dict[str, EventSpec] = {e.label: e for e in EVENTS}
 
 TARGET_REPORTS_PER_EVENT = 500
 RELIEFWEB_BASE = "https://reliefweb.int"
@@ -168,8 +190,8 @@ def scrape_reliefweb_report(
             "event_name": event.name,
             "event_date": event.date,
         }
-    except Exception as e:
-        print(f"  Error scraping ReliefWeb report {url}: {e}")
+    except Exception:
+        # On failure (e.g. HTTP 429), return a stub row without printing noisy errors.
         return {
             "report_id": f"rw_{hash(url) & 0xFFFFFFFF}",
             "headline": list_title or "N/A",
@@ -204,7 +226,7 @@ def collect_reliefweb_media_for_event(
     reports: List[Dict[str, Any]] = []
     seen_urls: set[str] = set()
 
-    max_workers = 12
+    max_workers = 24
     tasks = {}
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         for entry in list_entries:
@@ -225,8 +247,9 @@ def collect_reliefweb_media_for_event(
                     print(f"  Scraped {len(reports)} full reports for {event.label}...")
                 if len(reports) >= target_count:
                     break
-            except Exception as e:
-                print(f"  Worker error while scraping ReliefWeb report: {e}")
+            except Exception:
+                # Any unexpected worker error is swallowed; failures already return stub rows.
+                continue
 
     print(f"Total ReliefWeb reports collected for {event.label}: {len(reports)}")
     return reports
@@ -234,16 +257,18 @@ def collect_reliefweb_media_for_event(
 
 """
 print(
-    "Defining build_media_dataframe: merge Event A and B report lists, clean duplicates, "
+    "Defining build_media_dataframe: merge per-event report lists, clean duplicates, "
     "parse dates, and save reliefweb_media_events.csv."
 )
 """
 
 
 def build_media_dataframe(
-    reports_a: List[Dict[str, Any]], reports_b: List[Dict[str, Any]]
+    reports_per_event: List[List[Dict[str, Any]]],
 ) -> pd.DataFrame:
-    all_reports = reports_a + reports_b
+    all_reports: List[Dict[str, Any]] = []
+    for chunk in reports_per_event:
+        all_reports.extend(chunk)
     if not all_reports:
         cols = [
             "report_id",
@@ -262,7 +287,20 @@ def build_media_dataframe(
         df = df.drop_duplicates(subset=["headline", "url"], keep="first")
         df = df.sort_values("publication_date").reset_index(drop=True)
 
-    out_path = "reliefweb_media_events.csv"
+    # Merge with any existing file instead of always overwriting,
+    # so that partial re-runs for individual events accumulate.
+    out_path = Path("reliefweb_media_events.csv")
+    if out_path.exists():
+        try:
+            existing = pd.read_csv(out_path)
+        except Exception:
+            existing = pd.DataFrame()
+        if not existing.empty:
+            df = pd.concat([existing, df], ignore_index=True)
+            df = df.drop_duplicates(
+                subset=["event_label", "headline", "url"], keep="first"
+            ).reset_index(drop=True)
+
     df.to_csv(out_path, index=False)
     print(f"\nSaved merged ReliefWeb media CSV to {out_path} with shape={df.shape}")
     return df
@@ -271,15 +309,20 @@ def build_media_dataframe(
 """
 print(
     "Defining run_stage3_reliefweb_media: full Stage 3 runner that scrapes ReliefWeb "
-    "for both events and writes the merged CSV."
+    "for all configured events and writes the merged CSV."
 )
 """
 
 
-def run_stage3_reliefweb_media() -> pd.DataFrame:
-    reports_a = collect_reliefweb_media_for_event(EVENT_A, TARGET_REPORTS_PER_EVENT)
-    reports_b = collect_reliefweb_media_for_event(EVENT_B, TARGET_REPORTS_PER_EVENT)
-    df = build_media_dataframe(reports_a, reports_b)
+def run_stage3_reliefweb_media(
+    selected_events: List[EventSpec] | None = None,
+) -> pd.DataFrame:
+    events = selected_events or EVENTS
+    reports_per_event: List[List[Dict[str, Any]]] = []
+    for ev in events:
+        reports = collect_reliefweb_media_for_event(ev, TARGET_REPORTS_PER_EVENT)
+        reports_per_event.append(reports)
+    df = build_media_dataframe(reports_per_event)
 
     print("\nReliefWeb media DataFrame preview:")
     print(df.head())
@@ -288,7 +331,48 @@ def run_stage3_reliefweb_media() -> pd.DataFrame:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description=(
+            "Stage 3 – ReliefWeb media scraping. "
+            "By default scrapes all configured events; use --events to restrict."
+        )
+    )
+    parser.add_argument(
+        "--events",
+        type=str,
+        help=(
+            "Comma-separated list of event_label values to scrape "
+            "(e.g. 'Indonesia_2018_09_28_M7.5,Myanmar_2016_08_24_M6.8'). "
+            "Default: all four events."
+        ),
+    )
+    args = parser.parse_args()
+
+    if args.events:
+        labels = [s.strip() for s in args.events.split(",") if s.strip()]
+        selected: List[EventSpec] = []
+        for lab in labels:
+            ev = EVENT_MAP.get(lab)
+            if ev is None:
+                print(
+                    f"Warning: unknown event_label '{lab}' – skipping.", file=sys.stderr
+                )
+            else:
+                selected.append(ev)
+        if not selected:
+            print(
+                "No valid event_labels provided; defaulting to all events.",
+                file=sys.stderr,
+            )
+            selected = EVENTS
+    else:
+        selected = EVENTS
+
     print(
         "\nSTAGE 3: Web Scraping – Media & Response Data (ReliefWeb, no API; web HTML only)"
     )
-    run_stage3_reliefweb_media()
+    print("Events to scrape:")
+    for ev in selected:
+        print(f"  - {ev.label} ({ev.name})")
+
+    run_stage3_reliefweb_media(selected)
