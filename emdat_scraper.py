@@ -22,7 +22,7 @@ class EventSpec:
 
 
 # Region 1 – Indonesia
-# Historical (A1): 2018 Sulawesi Earthquake (already used)
+# Historical (A1): 2018 Sulawesi Earthquake
 EVENT_A1 = EventSpec(
     label="Indonesia_2018_09_28_M7.5",
     country="Indonesia",
@@ -32,7 +32,7 @@ EVENT_A1 = EventSpec(
     day=28,
     magnitude=7.5,
 )
-# Recent (A2): 2024 West Java / Bandung Earthquake (M 5.0, approximate date in Sept 2024)
+# Recent (A2): 2024 West Java / Bandung Earthquake
 EVENT_A2 = EventSpec(
     label="Indonesia_2024_09_M5.0",
     country="Indonesia",
@@ -42,25 +42,26 @@ EVENT_A2 = EventSpec(
     magnitude=5.0,
 )
 
-# Region 2 – Myanmar
-# Historical (B1): 2016 Chauk / Bagan Earthquake (M 6.8, 24 August 2016)
+# Region 2 – Afghanistan
+# Historical (B1): 2015 Hindu Kush Earthquake
 EVENT_B1 = EventSpec(
-    label="Myanmar_2016_08_24_M6.8",
-    country="Myanmar",
+    label="Afghanistan_2015_10_26_M7.5",
+    country="Afghanistan",
     disaster_type="Earthquake",
-    year=2016,
-    month=8,
-    day=24,
-    magnitude=6.8,
+    year=2015,
+    month=10,
+    day=26,
+    magnitude=7.5,
 )
-# Recent (B2): 2025 Mandalay Earthquake (already used)
+# Recent (B2): 2023 Herat Earthquakes
 EVENT_B2 = EventSpec(
-    label="Myanmar_2025_03_M7.7",
-    country="Myanmar",
+    label="Afghanistan_2023_10_07_M6.3",
+    country="Afghanistan",
     disaster_type="Earthquake",
-    year=2025,
-    month=3,
-    magnitude=7.7,
+    year=2023,
+    month=10,
+    day=7,
+    magnitude=6.3,
 )
 
 EVENTS: List[EventSpec] = [EVENT_A1, EVENT_A2, EVENT_B1, EVENT_B2]
@@ -302,7 +303,7 @@ def extract_impact_metrics(
 """
 print(
     "Defining run_stage2_emdat_impact: end-to-end Stage 2 runner that downloads EM-DAT data "
-    "via HDX API, selects the two events, and writes emdat_events_impact.csv."
+    "via HDX API, selects the events, and writes emdat_events_impact.csv."
 )
 """
 
@@ -347,6 +348,6 @@ def run_stage2_emdat_impact() -> pd.DataFrame:
 if __name__ == "__main__":
     print(
         "About to run Stage 2 (EM-DAT impact extraction) using HDX API: "
-        "download EM-DAT data programmatically, then extract deaths/affected/damages for the two events."
+        "download EM-DAT data programmatically, then extract deaths/affected/damages for the four events."
     )
     run_stage2_emdat_impact()

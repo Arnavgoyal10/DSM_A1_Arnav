@@ -37,26 +37,26 @@ EVENT_A2 = EventSpec(
     hazard_type="Earthquake",
 )
 
-# Region 2 – Myanmar
+# Region 2 – Afghanistan
 EVENT_B1 = EventSpec(
-    label="Myanmar_2016_08_24_M6.8",
-    name="2016 Chauk / Bagan Earthquake",
-    date="2016-08-24",
-    location="Myanmar",
+    label="Afghanistan_2015_10_26_M7.5",
+    name="2015 Hindu Kush Earthquake",
+    date="2015-10-26",
+    location="Afghanistan",
     hazard_type="Earthquake",
 )
 EVENT_B2 = EventSpec(
-    label="Myanmar_2025_03_M7.7",
-    name="2025 Mandalay Earthquake",
-    date="2025-03-01",  # approximate month; exact day unknown
-    location="Myanmar",
+    label="Afghanistan_2023_10_07_M6.3",
+    name="2023 Herat Earthquakes",
+    date="2023-10-07",
+    location="Afghanistan",
     hazard_type="Earthquake",
 )
 
 EVENTS: List[EventSpec] = [EVENT_A1, EVENT_A2, EVENT_B1, EVENT_B2]
 EVENT_MAP: Dict[str, EventSpec] = {e.label: e for e in EVENTS}
 
-TARGET_REPORTS_PER_EVENT = 500
+TARGET_REPORTS_PER_EVENT = 1000
 RELIEFWEB_BASE = "https://reliefweb.int"
 
 SESSION = requests.Session()
@@ -83,9 +83,13 @@ def scrape_reliefweb_list(event: EventSpec, target_count: int) -> List[Dict[str,
     reports: List[Dict[str, Any]] = []
     seen_urls: set[str] = set()
 
-    query = quote_plus(f"{event.hazard_type} {event.location}")
+    year = event.date[:4]
+
+    # Broaden query to just location and year for ALL events to maximize reports
+    query = quote_plus(f"{event.location} {year}")
+    
     page = 0
-    max_pages = 80
+    max_pages = 150
 
     while len(reports) < target_count and page < max_pages:
         list_url = f"{RELIEFWEB_BASE}/updates?view=reports&search={query}&page={page}"
@@ -283,12 +287,18 @@ def build_media_dataframe(
         df = pd.DataFrame(columns=cols)
     else:
         df = pd.DataFrame(all_reports)
-        df["publication_date"] = pd.to_datetime(df["publication_date"], errors="coerce")
+        # Convert to datetime and strip timezone info to allow safe comparisons with tz-naive event_date
+        df["publication_date"] = pd.to_datetime(df["publication_date"], errors="coerce").dt.tz_localize(None)
+        df["event_date_dt"] = pd.to_datetime(df["event_date"], errors="coerce")
+        
+        # Keep only reports where publication_date >= event_date (or dates are missing)
+        mask = df["publication_date"].isna() | df["event_date_dt"].isna() | (df["publication_date"] >= df["event_date_dt"])
+        df = df[mask].drop(columns=["event_date_dt"])
+        
         df = df.drop_duplicates(subset=["headline", "url"], keep="first")
         df = df.sort_values("publication_date").reset_index(drop=True)
 
-    # Merge with any existing file instead of always overwriting,
-    # so that partial re-runs for individual events accumulate.
+
     out_path = Path("reliefweb_media_events.csv")
     if out_path.exists():
         try:
@@ -342,7 +352,7 @@ if __name__ == "__main__":
         type=str,
         help=(
             "Comma-separated list of event_label values to scrape "
-            "(e.g. 'Indonesia_2018_09_28_M7.5,Myanmar_2016_08_24_M6.8'). "
+            "(e.g. 'Indonesia_2018_09_28_M7.5,Afghanistan_2015_10_26_M7.5'). "
             "Default: all four events."
         ),
     )

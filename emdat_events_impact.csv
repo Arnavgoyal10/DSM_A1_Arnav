@@ -1,5 +1,5 @@
 event_label,country,start_year,start_month,start_day,disaster_type,magnitude,total_events_in_year_country,total_deaths,total_affected,population_exposed,total_damages_usd,economic_damage_per_capita
 Indonesia_2018_09_28_M7.5,Indonesia,2018,9,28.0,Earthquake,7.5,1.0,4140.0,2000000.0,2000000.0,1450000000.0,725.0
 Indonesia_2024_09_M5.0,Indonesia,2024,9,,Earthquake,5.0,3.0,2.0,150209.0,150209.0,70000000.0,466.01734916017017
-Myanmar_2016_08_24_M6.8,Myanmar,2016,8,24.0,Earthquake,6.8,1.0,4.0,1152.0,1152.0,10000000.0,8680.555555555555
-Myanmar_2025_03_M7.7,Myanmar,2025,3,,Earthquake,7.7,1.0,3820.0,1355104.0,1355104.0,11000000000.0,8117.45814343401
+Afghanistan_2015_10_26_M7.5,Afghanistan,2015,10,26.0,Earthquake,7.5,2.0,115.0,93132.0,93132.0,0.0,0.0
+Afghanistan_2023_10_07_M6.3,Afghanistan,2023,10,7.0,Earthquake,6.3,3.0,1486.0,280435.0,280435.0,217000000.0,773.7978497691087

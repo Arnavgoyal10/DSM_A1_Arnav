@@ -1,178 +1,178 @@
 {
-  "Indonesia_2018_09_28_M7.5": {
+  "Afghanistan_2015_10_26_M7.5": {
     "temporal": {
-      "event_date": "2018-09-28",
-      "media_peak_date": "2022-11-22",
-      "media_peak_daily_volume": 9,
-      "delta_t_days": 1516
+      "event_date": "2015-10-26",
+      "media_peak_date": "2015-10-28",
+      "media_peak_daily_volume": 7,
+      "delta_t_days": 2
     },
     "sentiment": {
-      "headline_sentiment_mean": -0.08994648648648647,
-      "headline_sentiment_std": 0.34564418426322907,
-      "headline_sentiment_n": 370
+      "headline_sentiment_mean": -0.09939592326139088,
+      "headline_sentiment_std": 0.3568350925520211,
+      "headline_sentiment_n": 417
     },
     "top_entities": {
       "org_like_top20": [
         [
-          "Indonesia",
-          688
-        ],
-        [
-          "Format News",
-          182
-        ],
-        [
           "PDF",
-          157
-        ],
-        [
-          "GDACS",
-          102
-        ],
-        [
-          "Press Release",
-          99
-        ],
-        [
-          "USGS",
-          90
-        ],
-        [
-          "BNPB",
-          65
-        ],
-        [
-          "BMKG",
-          50
-        ],
-        [
-          "UTC",
-          50
-        ],
-        [
-          "Myanmar",
-          43
-        ],
-        [
-          "West Java",
-          42
-        ],
-        [
-          "Press Release Source AHA Centre",
-          33
-        ],
-        [
-          "AHA",
-          26
-        ],
-        [
-          "MB",
-          23
+          299
         ],
         [
           "Afghanistan",
+          262
+        ],
+        [
+          "Format News",
+          135
+        ],
+        [
+          "Pakistan",
+          124
+        ],
+        [
+          "Press Release",
+          102
+        ],
+        [
+          "MB",
+          50
+        ],
+        [
+          "WFP",
+          43
+        ],
+        [
+          "UN",
+          33
+        ],
+        [
+          "East Africa",
+          32
+        ],
+        [
+          "Ethiopia",
+          32
+        ],
+        [
+          "Yemen",
+          25
+        ],
+        [
+          "Ukraine",
+          23
+        ],
+        [
+          "Afghans",
+          22
+        ],
+        [
+          "Afghan",
+          22
+        ],
+        [
+          "UK",
+          22
+        ],
+        [
+          "Format Analysis",
+          21
+        ],
+        [
+          "Crop Monitor",
           20
         ],
         [
-          "ASEAN",
+          "West Africa",
           19
         ],
         [
-          "Indonesian",
+          "Somalia",
           18
         ],
         [
-          "Central Sulawesi",
-          17
-        ],
-        [
-          "Sulawesi",
-          17
-        ],
-        [
-          "COVID-19",
-          16
+          "English",
+          18
         ]
       ],
       "numeric_like_top20": [
         [
-          "22",
-          43
-        ],
-        [
-          "8",
-          38
-        ],
-        [
           "26",
-          36
+          52
         ],
         [
           "1",
+          48
+        ],
+        [
+          "12",
           36
         ],
         [
-          "13",
-          31
+          "3",
+          35
         ],
         [
-          "11",
-          30
+          "15",
+          32
+        ],
+        [
+          "5",
+          31
         ],
         [
           "30",
           30
         ],
         [
-          "25",
+          "14",
           29
         ],
         [
-          "23",
+          "17",
           29
         ],
         [
-          "27",
+          "22",
           28
         ],
         [
-          "15",
-          26
+          "28",
+          28
         ],
         [
           "18",
           26
         ],
         [
-          "12",
-          25
-        ],
-        [
-          "28",
-          25
-        ],
-        [
-          "5",
-          25
-        ],
-        [
           "2",
+          25
+        ],
+        [
+          "9",
+          25
+        ],
+        [
+          "19",
+          25
+        ],
+        [
+          "4",
           24
         ],
         [
-          "21",
+          "23",
           24
         ],
         [
-          "29",
-          23
-        ],
-        [
-          "14",
-          23
+          "20",
+          24
         ],
         [
           "10",
+          22
+        ],
+        [
+          "16",
           22
         ]
       ]
@@ -180,292 +180,326 @@
     "entity_classification": {
       "ngo": [
         [
-          "Press Release Source AHA Centre",
-          33
-        ],
-        [
-          "AHA",
-          26
-        ],
-        [
           "WFP",
-          11
+          43
         ],
         [
-          "Press Release Source AHA Centre Posted",
-          10
+          "UNHCR",
+          15
         ],
         [
-          "Press Release Source Direct Relief Posted",
-          7
+          "MSF",
+          12
         ],
         [
-          "UNDRR",
+          "UNICEF",
+          6
+        ],
+        [
+          "CERF",
           5
-        ],
-        [
-          "Press Release Source UNFPA",
-          5
-        ],
-        [
-          "MapAction",
-          4
-        ],
-        [
-          "Press Release Source Islamic Relief Posted",
-          4
         ],
         [
           "Press Release Source UNDP",
           4
         ],
         [
+          "Press Release Source UNICEF",
+          3
+        ],
+        [
           "UNDP",
-          4
-        ],
-        [
-          "Press Release Source Mercy Corps",
           3
         ],
         [
-          "Press Release Source CARE",
-          3
+          "ECHO Factsheet \u2013 Pakistan",
+          2
         ],
         [
-          "Red Cross",
-          3
+          "the International Committee of the Red Cross",
+          2
         ],
         [
-          "Format Situation Report Source AHA Centre Posted",
-          3
+          "Press Release Source UNFPA",
+          2
+        ],
+        [
+          "Biometric Data Systems Imperil",
+          2
+        ],
+        [
+          "Press Release Source UNDP Posted",
+          2
+        ],
+        [
+          "Mercy Corps",
+          2
+        ],
+        [
+          "the World Health Organization (WHO",
+          2
         ]
       ],
       "government": [
         [
-          "GDACS",
-          102
+          "Taliban",
+          11
         ],
         [
-          "USGS",
-          90
+          "Pakistan Source Government of",
+          9
         ],
         [
-          "BNPB",
-          65
+          "NDMA",
+          5
         ],
         [
-          "BMKG",
-          50
-        ],
-        [
-          "ASEAN",
-          19
-        ],
-        [
-          "Cianjur Regency",
-          13
-        ],
-        [
-          "the Indonesian Government",
+          "the Government of Sweden",
           4
         ],
         [
-          "Geophysical Agency - BMKG",
-          3
-        ],
-        [
-          "Karangasem Regency",
-          3
-        ],
-        [
-          "Bojonegoro District",
-          3
-        ],
-        [
-          "The ASEAN Parliamentarians for Human Rights",
-          3
-        ],
-        [
-          "COPERNICUS EMSR",
+          "USGS",
           2
         ],
         [
-          "Mentawai Islands Regency",
+          "the World Governments Summit",
           2
         ],
         [
-          "the Japan Government",
+          "the Islamic Emirate",
           2
         ],
         [
-          "PNG Government Collaborate",
+          "The Islamic Emirate of Afghanistan",
           2
+        ],
+        [
+          "Foreign Ministry",
+          1
+        ],
+        [
+          "the Government of the Islamic Republic of Afghanistan",
+          1
+        ],
+        [
+          "Government",
+          1
+        ],
+        [
+          "Surkano District",
+          1
+        ],
+        [
+          "the Ministry of Foreign Affairs",
+          1
+        ],
+        [
+          "Provincial",
+          1
+        ],
+        [
+          "The Australian Government\u2019s",
+          1
         ]
       ],
       "private": [
         [
-          "West Sumatra Province",
-          7
-        ],
-        [
-          "West Java Province",
-          7
-        ],
-        [
-          "Central Sulawesi Province",
-          5
-        ],
-        [
-          "North Maluku Province",
-          4
-        ],
-        [
-          "Papua province",
-          4
-        ],
-        [
-          "Maluku Province",
-          3
-        ],
-        [
-          "West Sulawesi Province",
-          3
-        ],
-        [
-          "Type of Incident:",
+          "Badakshan Province",
           2
         ],
         [
-          "Aceh Province",
+          "Badakhshan Province",
           2
         ],
         [
-          "South Papua Province",
+          "Badakhshan province",
           2
         ],
         [
-          "Bengkulu province",
-          2
+          "Badakshan province",
+          1
+        ],
+        [
+          "Kunar province",
+          1
+        ],
+        [
+          "Nimruz Province",
+          1
+        ],
+        [
+          "Disaster Management: Private",
+          1
         ],
         [
           "Inclusion Contrast",
           1
         ],
         [
-          "the West Sulawesi Province",
-          1
-        ],
-        [
-          "South Sulawesi Province",
-          1
-        ],
-        [
-          "Papua Province",
+          "Khorasan Province",
           1
         ]
       ]
     },
     "extracted_impact": {
       "deaths": {
-        "total_mentions": 63,
-        "unique_values": 46,
+        "total_mentions": 31,
+        "unique_values": 26,
         "top_values": [
           [
-            "11",
-            3
-          ],
-          [
-            "10000",
-            3
-          ],
-          [
-            "114683",
-            3
-          ],
-          [
-            "37",
+            "185",
             2
           ],
           [
-            "40000",
+            "2000",
             2
           ],
           [
-            "500",
+            "16000",
             2
           ],
           [
-            "4000",
+            "65000",
             2
           ],
           [
-            "230000",
+            "000",
             2
           ],
           [
-            "162",
-            2
+            "101.8",
+            1
           ],
           [
-            "160",
-            2
+            "2100",
+            1
           ],
           [
-            "268",
-            2
+            "3500",
+            1
           ],
           [
-            "271",
-            2
+            "15",
+            1
           ],
           [
-            "300",
-            2
+            "231",
+            1
           ],
           [
-            "11500",
-            2
+            "267",
+            1
           ],
           [
-            "34",
+            "220",
+            1
+          ],
+          [
+            "228",
+            1
+          ],
+          [
+            "279",
+            1
+          ],
+          [
+            "112",
             1
           ]
         ]
       },
       "losses": {
-        "total_mentions": 344,
-        "unique_values": 120,
+        "total_mentions": 129,
+        "unique_values": 65,
         "top_values": [
           [
-            "2022",
-            61
-          ],
-          [
-            "2023",
-            46
+            "2015",
+            28
           ],
           [
             "2024",
-            36
+            14
           ],
           [
-            "2021",
-            31
+            "2022",
+            8
           ],
           [
-            "2020",
-            6
-          ],
-          [
-            "27",
+            "2023",
             5
           ],
           [
-            "2018",
-            4
+            "7.5",
+            3
           ],
           [
-            "10000",
+            "2019",
+            3
+          ],
+          [
+            "2021",
+            3
+          ],
+          [
+            "387",
+            2
+          ],
+          [
+            "30704",
+            2
+          ],
+          [
+            "185",
+            2
+          ],
+          [
+            "2018",
+            2
+          ],
+          [
+            "60",
+            2
+          ],
+          [
+            "2010",
+            2
+          ],
+          [
+            "2025",
+            2
+          ],
+          [
+            "432",
+            1
+          ]
+        ]
+      },
+      "relief_funds": {
+        "total_mentions": 112,
+        "unique_values": 43,
+        "top_values": [
+          [
+            "2022",
+            18
+          ],
+          [
+            "2023",
+            12
+          ],
+          [
+            "2015",
+            9
+          ],
+          [
+            "2021",
+            5
+          ],
+          [
+            "1",
+            5
+          ],
+          [
+            "2024",
             4
           ],
           [
@@ -473,69 +507,516 @@
             4
           ],
           [
-            "2004",
+            "500000",
             3
           ],
           [
-            "24",
+            "12",
             3
           ],
           [
-            "000469",
+            "2018",
             3
-          ],
-          [
-            "5.6",
-            3
-          ],
-          [
-            "1",
-            3
-          ],
-          [
-            "387",
-            3
-          ]
-        ]
-      },
-      "relief_funds": {
-        "total_mentions": 46,
-        "unique_values": 20,
-        "top_values": [
-          [
-            "2023",
-            8
-          ],
-          [
-            "13",
-            4
-          ],
-          [
-            "2024",
-            4
           ],
           [
             "2020",
             3
           ],
           [
-            "2021",
-            3
-          ],
-          [
-            "2022",
-            3
-          ],
-          [
-            "63",
-            3
-          ],
-          [
-            "2019",
+            "16.5",
             2
           ],
           [
-            "150000",
+            "15",
+            2
+          ],
+          [
+            "2",
+            2
+          ],
+          [
+            "267",
+            2
+          ]
+        ]
+      }
+    },
+    "impact": {
+      "country": "Afghanistan",
+      "start_year": 2015,
+      "start_month": 10,
+      "start_day": 26.0,
+      "disaster_type": "Earthquake",
+      "magnitude": 7.5,
+      "total_events_in_year_country": 2.0,
+      "total_deaths": 115.0,
+      "total_affected": 93132.0,
+      "population_exposed": 93132.0,
+      "total_damages_usd": 0.0,
+      "economic_damage_per_capita": 0.0
+    }
+  },
+  "Afghanistan_2023_10_07_M6.3": {
+    "temporal": {
+      "event_date": "2023-10-07",
+      "media_peak_date": "2024-10-25",
+      "media_peak_daily_volume": 4,
+      "delta_t_days": 384
+    },
+    "sentiment": {
+      "headline_sentiment_mean": -0.04928403361344538,
+      "headline_sentiment_std": 0.3583210756376306,
+      "headline_sentiment_n": 238
+    },
+    "top_entities": {
+      "org_like_top20": [
+        [
+          "Afghanistan",
+          315
+        ],
+        [
+          "PDF",
+          191
+        ],
+        [
+          "UNHCR",
+          101
+        ],
+        [
+          "Format News",
+          77
+        ],
+        [
+          "Pakistan",
+          74
+        ],
+        [
+          "Press Release",
+          67
+        ],
+        [
+          "MB",
+          36
+        ],
+        [
+          "WFP",
+          32
+        ],
+        [
+          "Afghans",
+          31
+        ],
+        [
+          "Afghan",
+          28
+        ],
+        [
+          "MSF",
+          19
+        ],
+        [
+          "KB",
+          17
+        ],
+        [
+          "Taliban",
+          16
+        ],
+        [
+          "UN",
+          15
+        ],
+        [
+          "the UN Refugee Agency",
+          15
+        ],
+        [
+          "Iran",
+          12
+        ],
+        [
+          "dans",
+          12
+        ],
+        [
+          "MoI",
+          11
+        ],
+        [
+          "IOM",
+          11
+        ],
+        [
+          "the UN Migration Agency",
+          11
+        ]
+      ],
+      "numeric_like_top20": [
+        [
+          "1",
+          41
+        ],
+        [
+          "26",
+          29
+        ],
+        [
+          "17",
+          26
+        ],
+        [
+          "15",
+          24
+        ],
+        [
+          "8",
+          22
+        ],
+        [
+          "24",
+          22
+        ],
+        [
+          "12",
+          21
+        ],
+        [
+          "21",
+          20
+        ],
+        [
+          "3",
+          19
+        ],
+        [
+          "2",
+          18
+        ],
+        [
+          "29",
+          17
+        ],
+        [
+          "23",
+          16
+        ],
+        [
+          "22",
+          16
+        ],
+        [
+          "10",
+          15
+        ],
+        [
+          "27",
+          14
+        ],
+        [
+          "19",
+          13
+        ],
+        [
+          "25",
+          13
+        ],
+        [
+          "28",
+          13
+        ],
+        [
+          "6",
+          12
+        ],
+        [
+          "13",
+          12
+        ]
+      ]
+    },
+    "entity_classification": {
+      "ngo": [
+        [
+          "UNHCR",
+          101
+        ],
+        [
+          "WFP",
+          32
+        ],
+        [
+          "MSF",
+          19
+        ],
+        [
+          "IOM",
+          11
+        ],
+        [
+          "Press Release Source UNICEF",
+          5
+        ],
+        [
+          "UNHCR - Pakistan Operational Update",
+          4
+        ],
+        [
+          "UNICEF",
+          4
+        ],
+        [
+          "Press Release Sources ACT Alliance",
+          4
+        ],
+        [
+          "Press Release Source UNAMA",
+          3
+        ],
+        [
+          "the WHO Regional Committee",
+          3
+        ],
+        [
+          "Kandahar",
+          3
+        ],
+        [
+          "DACAAR",
+          3
+        ],
+        [
+          "Save the Children",
+          2
+        ],
+        [
+          "UNHCR\u2019s Response & Financial Requirements",
+          2
+        ],
+        [
+          "Press Release Source DACAAR",
+          2
+        ]
+      ],
+      "government": [
+        [
+          "Taliban",
+          16
+        ],
+        [
+          "the Ministry of Interior's",
+          10
+        ],
+        [
+          "the Government of Pakistan",
+          2
+        ],
+        [
+          "the Australian Government Discussion Paper",
+          2
+        ],
+        [
+          "the Afghan Economy but Benefit the Taliban",
+          2
+        ],
+        [
+          "the Government of Sweden",
+          2
+        ],
+        [
+          "Interim Taliban Authority",
+          1
+        ],
+        [
+          "the Qatar Ministry",
+          1
+        ],
+        [
+          "Obe district",
+          1
+        ],
+        [
+          "the Government of Indonesia",
+          1
+        ],
+        [
+          "the Islamic Emirate of Afg",
+          1
+        ],
+        [
+          "the Islamic Emirate",
+          1
+        ],
+        [
+          "the Ministry of Interior\u2019s",
+          1
+        ]
+      ],
+      "private": [
+        [
+          "Khost province",
+          2
+        ],
+        [
+          "Kunar Province",
+          1
+        ],
+        [
+          "Hilmand province",
+          1
+        ],
+        [
+          "Uruzgan province",
+          1
+        ],
+        [
+          "Herat Province",
+          1
+        ],
+        [
+          "Badakhshan province",
+          1
+        ]
+      ]
+    },
+    "extracted_impact": {
+      "deaths": {
+        "total_mentions": 12,
+        "unique_values": 10,
+        "top_values": [
+          [
+            "16753",
+            2
+          ],
+          [
+            "260000",
+            2
+          ],
+          [
+            "42",
+            1
+          ],
+          [
+            "84",
+            1
+          ],
+          [
+            "2100",
+            1
+          ],
+          [
+            "3500",
+            1
+          ],
+          [
+            "280",
+            1
+          ],
+          [
+            "1023",
+            1
+          ],
+          [
+            "666025",
+            1
+          ],
+          [
+            "73",
+            1
+          ]
+        ]
+      },
+      "losses": {
+        "total_mentions": 48,
+        "unique_values": 20,
+        "top_values": [
+          [
+            "2024",
+            13
+          ],
+          [
+            "2025",
+            8
+          ],
+          [
+            "2026",
+            3
+          ],
+          [
+            "2023",
+            2
+          ],
+          [
+            "393",
+            2
+          ],
+          [
+            "16753",
+            2
+          ],
+          [
+            "167.2",
+            2
+          ],
+          [
+            "241.95",
+            2
+          ],
+          [
+            "10",
+            2
+          ],
+          [
+            "2022",
+            2
+          ],
+          [
+            "183",
+            1
+          ],
+          [
+            "745.26",
+            1
+          ],
+          [
+            "6.6",
+            1
+          ],
+          [
+            "604.83",
+            1
+          ],
+          [
+            "2100",
+            1
+          ]
+        ]
+      },
+      "relief_funds": {
+        "total_mentions": 88,
+        "unique_values": 28,
+        "top_values": [
+          [
+            "2024",
+            40
+          ],
+          [
+            "2025",
+            9
+          ],
+          [
+            "1",
+            4
+          ],
+          [
+            "2026",
+            3
+          ],
+          [
+            "10",
+            3
+          ],
+          [
+            "130",
             2
           ],
           [
@@ -543,24 +1024,593 @@
             2
           ],
           [
+            "29",
+            2
+          ],
+          [
+            "260000",
+            2
+          ],
+          [
+            "2023",
+            2
+          ],
+          [
+            "2014",
+            2
+          ],
+          [
+            "4",
+            1
+          ],
+          [
+            "33",
+            1
+          ],
+          [
+            "135",
+            1
+          ],
+          [
+            "1.03",
+            1
+          ]
+        ]
+      }
+    },
+    "impact": {
+      "country": "Afghanistan",
+      "start_year": 2023,
+      "start_month": 10,
+      "start_day": 7.0,
+      "disaster_type": "Earthquake",
+      "magnitude": 6.3,
+      "total_events_in_year_country": 3.0,
+      "total_deaths": 1486.0,
+      "total_affected": 280435.0,
+      "population_exposed": 280435.0,
+      "total_damages_usd": 217000000.0,
+      "economic_damage_per_capita": 773.7978497691087
+    }
+  },
+  "Indonesia_2018_09_28_M7.5": {
+    "temporal": {
+      "event_date": "2018-09-28",
+      "media_peak_date": "2018-10-05",
+      "media_peak_daily_volume": 7,
+      "delta_t_days": 7
+    },
+    "sentiment": {
+      "headline_sentiment_mean": -0.06743702127659573,
+      "headline_sentiment_std": 0.41605470249818405,
+      "headline_sentiment_n": 470
+    },
+    "top_entities": {
+      "org_like_top20": [
+        [
+          "Indonesia",
+          584
+        ],
+        [
+          "PDF",
+          242
+        ],
+        [
+          "Format News",
+          152
+        ],
+        [
+          "Press Release",
+          133
+        ],
+        [
+          "Tsunami",
+          58
+        ],
+        [
+          "MB",
+          51
+        ],
+        [
+          "Sulawesi",
+          49
+        ],
+        [
+          "Central Sulawesi",
+          46
+        ],
+        [
+          "Indonesian",
+          38
+        ],
+        [
+          "WFP",
+          34
+        ],
+        [
+          "Lombok",
+          31
+        ],
+        [
+          "ASEAN",
+          30
+        ],
+        [
+          "Myanmar",
+          26
+        ],
+        [
+          "Malaysia",
+          22
+        ],
+        [
+          "UN",
+          17
+        ],
+        [
+          "West Nusa Tenggara",
+          16
+        ],
+        [
+          "Syria",
+          16
+        ],
+        [
+          "Format Situation Report",
+          15
+        ],
+        [
+          "Philippines",
+          15
+        ],
+        [
+          "KB",
+          15
+        ]
+      ],
+      "numeric_like_top20": [
+        [
+          "15",
+          47
+        ],
+        [
+          "26",
+          41
+        ],
+        [
+          "11",
+          39
+        ],
+        [
+          "12",
+          38
+        ],
+        [
+          "28",
+          38
+        ],
+        [
+          "9",
+          37
+        ],
+        [
+          "5",
+          37
+        ],
+        [
+          "16",
+          36
+        ],
+        [
+          "10",
+          34
+        ],
+        [
+          "8",
+          33
+        ],
+        [
+          "13",
+          33
+        ],
+        [
+          "21",
+          32
+        ],
+        [
+          "1",
+          32
+        ],
+        [
+          "29",
+          30
+        ],
+        [
+          "2",
+          29
+        ],
+        [
+          "4",
+          29
+        ],
+        [
+          "22",
+          28
+        ],
+        [
+          "18",
+          27
+        ],
+        [
+          "14",
+          26
+        ],
+        [
+          "6",
+          26
+        ]
+      ]
+    },
+    "entity_classification": {
+      "ngo": [
+        [
+          "WFP",
+          34
+        ],
+        [
+          "Press Release Source AHA Centre",
+          9
+        ],
+        [
+          "Press Release Source Direct Relief Posted",
+          8
+        ],
+        [
+          "Press Release Source UNFPA",
+          8
+        ],
+        [
+          "UNDP",
+          7
+        ],
+        [
+          "Red Cross",
+          6
+        ],
+        [
+          "Press Release Source CWS",
+          6
+        ],
+        [
+          "Press Release Source Mercy Corps",
+          5
+        ],
+        [
+          "CARE",
+          5
+        ],
+        [
+          "UNICEF",
+          5
+        ],
+        [
+          "Press Release Source UNICEF",
+          5
+        ],
+        [
+          "the International Federation of Red Cross",
+          5
+        ],
+        [
+          "UNFPA",
+          5
+        ],
+        [
+          "CWS",
+          5
+        ],
+        [
+          "CERF",
+          5
+        ]
+      ],
+      "government": [
+        [
+          "ASEAN",
+          30
+        ],
+        [
+          "BNPB",
+          13
+        ],
+        [
+          "the Government of Indonesia",
+          8
+        ],
+        [
+          "GDACS",
+          4
+        ],
+        [
+          "BMKG",
+          4
+        ],
+        [
+          "the ASEAN Village",
+          3
+        ],
+        [
+          "the ASEAN Coordinating Centre for Humanitarian Assistance",
+          2
+        ],
+        [
+          "USGS",
+          2
+        ],
+        [
+          "Parigi Moutong Regency",
+          2
+        ],
+        [
+          "Ministry of Health and Medical Services",
+          2
+        ],
+        [
+          "ASEAN Risk Monitor",
+          1
+        ],
+        [
+          "Cianjur Regency",
+          1
+        ],
+        [
+          "Thai Khu Fa Building, Government House",
+          1
+        ],
+        [
+          "Donggala Regency",
+          1
+        ],
+        [
+          "The Indonesian Ministry of Foreign Affairs",
+          1
+        ]
+      ],
+      "private": [
+        [
+          "Central Sulawesi Province",
+          10
+        ],
+        [
+          "Lampung Provinces",
+          3
+        ],
+        [
+          "Kerinci",
+          2
+        ],
+        [
+          "Aceh Province",
+          1
+        ],
+        [
+          "West Sulawesi Province",
+          1
+        ],
+        [
+          "Inclusion Contrast",
+          1
+        ],
+        [
+          "Sulu province",
+          1
+        ],
+        [
+          "Bali Process Toolkit for Inclusive Civil Registration World Bali Process Toolkit for Inclusive Civil Registration Format",
+          1
+        ],
+        [
+          "Protecting Persons in Event of Disasters World With World Experiencing Increasing Floods",
+          1
+        ]
+      ]
+    },
+    "extracted_impact": {
+      "deaths": {
+        "total_mentions": 75,
+        "unique_values": 63,
+        "top_values": [
+          [
+            "60",
+            3
+          ],
+          [
+            "57000",
+            3
+          ],
+          [
+            "1",
+            2
+          ],
+          [
+            "000",
+            2
+          ],
+          [
+            "200000",
+            2
+          ],
+          [
+            "671",
+            2
+          ],
+          [
+            "2077",
+            2
+          ],
+          [
+            "2101",
+            2
+          ],
+          [
+            "34",
+            2
+          ],
+          [
+            "11500",
+            2
+          ],
+          [
+            "40000",
+            1
+          ],
+          [
+            "600",
+            1
+          ],
+          [
+            "10",
+            1
+          ],
+          [
+            "2018",
+            1
+          ],
+          [
+            "4000",
+            1
+          ]
+        ]
+      },
+      "losses": {
+        "total_mentions": 255,
+        "unique_values": 127,
+        "top_values": [
+          [
+            "2018",
+            61
+          ],
+          [
+            "2019",
+            12
+          ],
+          [
+            "2023",
+            7
+          ],
+          [
+            "2020",
+            7
+          ],
+          [
+            "2021",
+            5
+          ],
+          [
+            "2022",
+            5
+          ],
+          [
+            "2015",
+            5
+          ],
+          [
+            "2024",
+            4
+          ],
+          [
+            "10000",
+            3
+          ],
+          [
             "2025",
+            3
+          ],
+          [
+            "2000",
+            3
+          ],
+          [
+            "2700",
+            3
+          ],
+          [
+            "60",
+            3
+          ],
+          [
+            "2004",
+            3
+          ],
+          [
+            "4000",
+            2
+          ]
+        ]
+      },
+      "relief_funds": {
+        "total_mentions": 154,
+        "unique_values": 51,
+        "top_values": [
+          [
+            "2018",
+            34
+          ],
+          [
+            "2019",
+            23
+          ],
+          [
+            "1",
+            10
+          ],
+          [
+            "6.4",
+            8
+          ],
+          [
+            "2020",
+            6
+          ],
+          [
+            "211569",
+            5
+          ],
+          [
+            "2024",
+            5
+          ],
+          [
+            "2025",
+            4
+          ],
+          [
+            "3",
+            3
+          ],
+          [
+            "2023",
+            3
+          ],
+          [
+            "18",
+            3
+          ],
+          [
+            "2022",
+            3
+          ],
+          [
+            "26.6",
             2
           ],
           [
-            "2026",
+            "182",
             2
           ],
           [
-            "24",
-            1
-          ],
-          [
-            "2.93",
-            1
-          ],
-          [
-            "50000",
-            1
+            "5.45",
+            2
           ]
         ]
       }
@@ -583,536 +1633,428 @@
   "Indonesia_2024_09_M5.0": {
     "temporal": {
       "event_date": "2024-09-01",
-      "media_peak_date": "2022-11-22",
-      "media_peak_daily_volume": 9,
-      "delta_t_days": -649
+      "media_peak_date": "2024-09-24",
+      "media_peak_daily_volume": 4,
+      "delta_t_days": 23
     },
     "sentiment": {
-      "headline_sentiment_mean": -0.09864507936507937,
-      "headline_sentiment_std": 0.3450262187945237,
-      "headline_sentiment_n": 315
+      "headline_sentiment_mean": 0.04218933333333332,
+      "headline_sentiment_std": 0.36163434889618273,
+      "headline_sentiment_n": 150
     },
     "top_entities": {
       "org_like_top20": [
         [
           "Indonesia",
-          595
-        ],
-        [
-          "Format News",
-          154
+          102
         ],
         [
           "PDF",
-          129
-        ],
-        [
-          "GDACS",
           92
         ],
         [
+          "Format News",
+          67
+        ],
+        [
           "Press Release",
-          87
-        ],
-        [
-          "USGS",
-          76
-        ],
-        [
-          "BNPB",
-          53
-        ],
-        [
-          "BMKG",
-          51
-        ],
-        [
-          "UTC",
-          45
+          44
         ],
         [
           "Myanmar",
-          38
-        ],
-        [
-          "West Java",
-          33
-        ],
-        [
-          "Press Release Source AHA Centre",
-          23
-        ],
-        [
-          "AHA",
-          21
+          31
         ],
         [
           "MB",
-          21
+          23
         ],
         [
-          "West Sulawesi",
-          17
+          "WFP",
+          19
         ],
         [
-          "ASEAN",
-          16
-        ],
-        [
-          "Sulawesi",
-          16
-        ],
-        [
-          "Afghanistan",
-          16
-        ],
-        [
-          "Indonesian",
+          "UNHCR",
           15
         ],
         [
-          "Central Sulawesi",
-          14
+          "Rohingya",
+          13
+        ],
+        [
+          "BNPB",
+          10
+        ],
+        [
+          "Afghanistan",
+          9
+        ],
+        [
+          "Indonesian",
+          8
+        ],
+        [
+          "KB",
+          8
+        ],
+        [
+          "BMKG",
+          8
+        ],
+        [
+          "Thailand",
+          7
+        ],
+        [
+          "UN",
+          7
+        ],
+        [
+          "Australia",
+          7
+        ],
+        [
+          "FAO",
+          6
+        ],
+        [
+          "Bangkok",
+          6
+        ],
+        [
+          "UNICEF",
+          5
         ]
       ],
       "numeric_like_top20": [
         [
-          "22",
-          40
+          "17",
+          15
         ],
         [
-          "8",
-          34
+          "15",
+          15
         ],
         [
           "1",
-          33
-        ],
-        [
-          "11",
-          32
-        ],
-        [
-          "30",
-          29
-        ],
-        [
-          "23",
-          27
-        ],
-        [
-          "17",
-          26
-        ],
-        [
-          "29",
-          26
-        ],
-        [
-          "28",
-          26
-        ],
-        [
-          "13",
-          26
-        ],
-        [
-          "26",
-          25
-        ],
-        [
-          "21",
-          25
-        ],
-        [
-          "12",
-          24
-        ],
-        [
-          "16",
-          23
-        ],
-        [
-          "5",
-          23
-        ],
-        [
-          "10",
-          20
-        ],
-        [
-          "27",
-          20
+          14
         ],
         [
           "2",
-          19
+          14
         ],
         [
-          "9",
-          18
+          "8",
+          14
         ],
         [
-          "14",
-          18
+          "21",
+          13
+        ],
+        [
+          "18",
+          13
+        ],
+        [
+          "13",
+          12
+        ],
+        [
+          "24",
+          12
+        ],
+        [
+          "5",
+          12
+        ],
+        [
+          "19",
+          12
+        ],
+        [
+          "4",
+          11
+        ],
+        [
+          "26",
+          11
+        ],
+        [
+          "11",
+          11
+        ],
+        [
+          "29",
+          10
+        ],
+        [
+          "23",
+          9
+        ],
+        [
+          "3",
+          9
+        ],
+        [
+          "25",
+          8
+        ],
+        [
+          "20",
+          7
+        ],
+        [
+          "22",
+          6
         ]
       ]
     },
     "entity_classification": {
       "ngo": [
         [
-          "Press Release Source AHA Centre",
-          23
-        ],
-        [
-          "AHA",
-          21
-        ],
-        [
-          "Press Release Source AHA Centre Posted",
-          9
-        ],
-        [
           "WFP",
-          9
+          19
         ],
         [
-          "Press Release Source Direct Relief Posted",
-          6
+          "UNHCR",
+          15
         ],
         [
-          "UNDRR",
+          "UNICEF",
           5
         ],
         [
-          "Mercy Corps",
-          5
-        ],
-        [
-          "MapAction",
+          "Save the Children",
           4
         ],
         [
-          "Press Release Source Islamic Relief Posted",
+          "Press Release Sources ACT Alliance",
           4
         ],
         [
-          "Press Release Source UNDP",
+          "UNESCO",
           4
         ],
         [
-          "Format Situation Report Source AHA Centre Posted",
+          "UNFPA",
           3
         ],
         [
-          "Press Release Source MapAction",
+          "Press Release Source UNICEF",
           3
         ],
         [
-          "Press Release Source CWS",
+          "Oxfam",
           3
         ],
         [
-          "INSARAG",
-          3
+          "the World Health Organization (WHO",
+          2
         ],
         [
-          "Press Release Source CARE",
-          3
+          "WHO",
+          2
+        ],
+        [
+          "Press Release Source World Vision",
+          2
+        ],
+        [
+          "WFP Seasonal Outlook - Regional Bureau",
+          2
+        ],
+        [
+          "UNICEF Representative, Presents Credentials",
+          2
+        ],
+        [
+          "Format Other Sources UNFPA",
+          1
         ]
       ],
       "government": [
         [
-          "GDACS",
-          92
-        ],
-        [
-          "USGS",
-          76
-        ],
-        [
           "BNPB",
-          53
+          10
         ],
         [
           "BMKG",
-          51
+          8
         ],
         [
           "ASEAN",
-          16
+          5
         ],
         [
-          "Cianjur Regency",
-          12
+          "GDACS",
+          4
         ],
         [
-          "the Indonesian National Board for Disaster Management",
-          3
-        ],
-        [
-          "Geophysical Agency - BMKG",
-          3
-        ],
-        [
-          "Bojonegoro District",
-          3
+          "USGS",
+          4
         ],
         [
           "The ASEAN Parliamentarians for Human Rights",
           3
         ],
         [
-          "Sigi District",
-          2
+          "Governments Should Urge Prabowo Administration",
+          1
         ],
         [
-          "the ASEAN Village",
-          2
+          "the Malawi Government",
+          1
         ],
         [
-          "the Indonesian Government",
-          2
+          "the Government of New Zealand",
+          1
         ],
         [
-          "the Japan Government",
-          2
+          "the Government of Fiji\u2019s",
+          1
         ],
         [
-          "PNG Government Collaborate",
-          2
+          "the Government of Indonesia",
+          1
+        ],
+        [
+          "the Government of N",
+          1
+        ],
+        [
+          "Bandung Regency",
+          1
+        ],
+        [
+          "Solok Regency",
+          1
+        ],
+        [
+          "the Indonesian National Board for Disaster Management (BNPB",
+          1
         ]
       ],
       "private": [
         [
           "West Java Province",
-          8
+          2
         ],
         [
-          "Central Sulawesi Province",
-          5
+          "countries, inc",
+          1
         ],
         [
           "West Sumatra Province",
-          5
-        ],
-        [
-          "Papua province",
-          4
-        ],
-        [
-          "Maluku Province",
-          3
-        ],
-        [
-          "the West Sulawesi Province",
-          2
-        ],
-        [
-          "West Sulawesi Province",
-          2
-        ],
-        [
-          "North Maluku Province",
-          2
-        ],
-        [
-          "Aceh Province",
-          2
-        ],
-        [
-          "South Papua Province",
-          2
-        ],
-        [
-          "Bengkulu province",
-          2
-        ],
-        [
-          "North Sulawesi Province",
-          1
-        ],
-        [
-          "Papua Province",
-          1
-        ],
-        [
-          "North Sumatra Province",
-          1
-        ],
-        [
-          "Type of Incident:",
           1
         ]
       ]
     },
     "extracted_impact": {
       "deaths": {
-        "total_mentions": 57,
-        "unique_values": 42,
+        "total_mentions": 5,
+        "unique_values": 4,
         "top_values": [
           [
-            "10000",
-            4
-          ],
-          [
-            "11",
-            3
-          ],
-          [
-            "114683",
-            3
-          ],
-          [
-            "40000",
+            "500000",
             2
           ],
           [
-            "73",
-            2
-          ],
-          [
-            "500",
-            2
-          ],
-          [
-            "230000",
-            2
-          ],
-          [
-            "162",
-            2
-          ],
-          [
-            "160",
-            2
-          ],
-          [
-            "268",
-            2
-          ],
-          [
-            "11500",
-            2
-          ],
-          [
-            "23",
+            "535000",
             1
           ],
           [
-            "212000",
+            "376000",
             1
           ],
           [
-            "391000",
-            1
-          ],
-          [
-            "34",
+            "51",
             1
           ]
         ]
       },
       "losses": {
-        "total_mentions": 299,
-        "unique_values": 107,
+        "total_mentions": 32,
+        "unique_values": 17,
         "top_values": [
           [
-            "2022",
-            47
-          ],
-          [
             "2024",
-            36
-          ],
-          [
-            "2023",
-            32
-          ],
-          [
-            "2021",
-            29
-          ],
-          [
-            "2020",
-            7
-          ],
-          [
-            "10000",
-            5
-          ],
-          [
-            "27",
-            5
-          ],
-          [
-            "2018",
-            4
+            10
           ],
           [
             "2025",
-            4
+            5
           ],
           [
-            "24",
-            3
+            "2026",
+            2
           ],
           [
-            "5.6",
-            3
+            "2015",
+            2
           ],
           [
-            "1",
-            3
+            "17.3",
+            1
           ],
           [
-            "387",
-            3
+            "135",
+            1
           ],
           [
-            "30704",
-            3
+            "4",
+            1
           ],
           [
-            "185",
-            3
+            "3.5",
+            1
+          ],
+          [
+            "1.3",
+            1
+          ],
+          [
+            "3",
+            1
+          ],
+          [
+            "100",
+            1
+          ],
+          [
+            "6",
+            1
+          ],
+          [
+            "1.49",
+            1
+          ],
+          [
+            "2021",
+            1
+          ],
+          [
+            "500",
+            1
           ]
         ]
       },
       "relief_funds": {
-        "total_mentions": 44,
-        "unique_values": 18,
+        "total_mentions": 47,
+        "unique_values": 16,
         "top_values": [
           [
-            "2023",
-            8
-          ],
-          [
-            "2021",
-            4
-          ],
-          [
-            "13",
-            4
+            "2025",
+            12
           ],
           [
             "2024",
-            4
+            12
           ],
           [
-            "2020",
-            3
+            "2026",
+            7
           ],
           [
-            "2022",
-            3
-          ],
-          [
-            "63",
-            3
-          ],
-          [
-            "2019",
+            "17",
             2
           ],
           [
@@ -1120,27 +2062,43 @@
             2
           ],
           [
-            "2025",
+            "2023",
             2
           ],
           [
-            "2026",
-            2
-          ],
-          [
-            "24",
+            "24.25",
             1
           ],
           [
-            "2.93",
+            "4",
             1
           ],
           [
-            "50000",
+            "4.96",
             1
           ],
           [
-            "200000",
+            "1.2",
+            1
+          ],
+          [
+            "1",
+            1
+          ],
+          [
+            "4.08",
+            1
+          ],
+          [
+            "44.5",
+            1
+          ],
+          [
+            "28000",
+            1
+          ],
+          [
+            "857.7",
             1
           ]
         ]
@@ -1150,7 +2108,7 @@
       "country": "Indonesia",
       "start_year": 2024,
       "start_month": 9,
-      "start_day": null,
+      "start_day": NaN,
       "disaster_type": "Earthquake",
       "magnitude": 5.0,
       "total_events_in_year_country": 3.0,
@@ -1159,1011 +2117,6 @@
       "population_exposed": 150209.0,
       "total_damages_usd": 70000000.0,
       "economic_damage_per_capita": 466.01734916017017
-    }
-  },
-  "Myanmar_2016_08_24_M6.8": {
-    "temporal": {
-      "event_date": "2016-08-24",
-      "media_peak_date": "2025-04-14",
-      "media_peak_daily_volume": 11,
-      "delta_t_days": 3155
-    },
-    "sentiment": {
-      "headline_sentiment_mean": -0.08027021857923498,
-      "headline_sentiment_std": 0.32276972233867013,
-      "headline_sentiment_n": 366
-    },
-    "top_entities": {
-      "org_like_top20": [
-        [
-          "Myanmar",
-          758
-        ],
-        [
-          "PDF",
-          247
-        ],
-        [
-          "Format News",
-          116
-        ],
-        [
-          "UNHCR",
-          72
-        ],
-        [
-          "Press Release",
-          61
-        ],
-        [
-          "MB",
-          32
-        ],
-        [
-          "Thailand",
-          24
-        ],
-        [
-          "UN",
-          21
-        ],
-        [
-          "Format Situation Report",
-          19
-        ],
-        [
-          "WFP",
-          16
-        ],
-        [
-          "Indonesia",
-          15
-        ],
-        [
-          "un",
-          13
-        ],
-        [
-          "Myanmar Format News",
-          13
-        ],
-        [
-          "English",
-          12
-        ],
-        [
-          "USGS",
-          11
-        ],
-        [
-          "Sagaing",
-          10
-        ],
-        [
-          "MIMU",
-          10
-        ],
-        [
-          "UNFPA",
-          10
-        ],
-        [
-          "Rohingya",
-          10
-        ],
-        [
-          "Press Release Source OHCHR",
-          9
-        ]
-      ],
-      "numeric_like_top20": [
-        [
-          "28",
-          44
-        ],
-        [
-          "7.7",
-          41
-        ],
-        [
-          "1",
-          36
-        ],
-        [
-          "2",
-          32
-        ],
-        [
-          "13",
-          32
-        ],
-        [
-          "16",
-          31
-        ],
-        [
-          "5",
-          29
-        ],
-        [
-          "23",
-          29
-        ],
-        [
-          "4",
-          28
-        ],
-        [
-          "10",
-          27
-        ],
-        [
-          "30",
-          26
-        ],
-        [
-          "9",
-          25
-        ],
-        [
-          "27",
-          25
-        ],
-        [
-          "8",
-          24
-        ],
-        [
-          "18",
-          24
-        ],
-        [
-          "22",
-          23
-        ],
-        [
-          "11",
-          22
-        ],
-        [
-          "3",
-          22
-        ],
-        [
-          "25",
-          22
-        ],
-        [
-          "12",
-          21
-        ]
-      ]
-    },
-    "entity_classification": {
-      "ngo": [
-        [
-          "UNHCR",
-          72
-        ],
-        [
-          "WFP",
-          16
-        ],
-        [
-          "UNFPA",
-          10
-        ],
-        [
-          "OCHA",
-          9
-        ],
-        [
-          "Format Situation Report Source UNFPA",
-          8
-        ],
-        [
-          "Press Release Source UNFPA",
-          7
-        ],
-        [
-          "Myanmar UNFPA Situation Report",
-          7
-        ],
-        [
-          "Press Release Source ICRC",
-          5
-        ],
-        [
-          "UNFPA Situation Report",
-          5
-        ],
-        [
-          "Myanmar Red Cross Society",
-          4
-        ],
-        [
-          "UNFPA Prioritizes Urgent Health and Protection Support",
-          4
-        ],
-        [
-          "Press Release Source IFRC",
-          4
-        ],
-        [
-          "Format Situation Report Sources Health Cluster WHO Posted",
-          4
-        ],
-        [
-          "Format Situation Report Source AHA Centre Posted",
-          3
-        ],
-        [
-          "Press Release Source Direct Relief Posted",
-          3
-        ]
-      ],
-      "government": [
-        [
-          "USGS",
-          11
-        ],
-        [
-          "GDACS",
-          9
-        ],
-        [
-          "ASEAN",
-          6
-        ],
-        [
-          "Copernicus EMSR",
-          4
-        ],
-        [
-          "The ASEAN Parliamentarians for Human Rights",
-          3
-        ],
-        [
-          "The Government of Japan",
-          3
-        ],
-        [
-          "the Government of",
-          1
-        ],
-        [
-          "the Government of Japan",
-          1
-        ],
-        [
-          "the Ministry of Land, Infrastructure",
-          1
-        ],
-        [
-          "the ASEAN Leaders\u2019 Statement",
-          1
-        ],
-        [
-          "the ASEAN Coordinating Centre for Humanitarian Assistance",
-          1
-        ]
-      ],
-      "private": [
-        [
-          "Sharp Increase",
-          2
-        ]
-      ]
-    },
-    "extracted_impact": {
-      "deaths": {
-        "total_mentions": 54,
-        "unique_values": 38,
-        "top_values": [
-          [
-            "3700",
-            5
-          ],
-          [
-            "3600",
-            3
-          ],
-          [
-            "3800",
-            3
-          ],
-          [
-            "35500",
-            3
-          ],
-          [
-            "16753",
-            2
-          ],
-          [
-            "10000",
-            2
-          ],
-          [
-            "40000",
-            2
-          ],
-          [
-            "20",
-            2
-          ],
-          [
-            "36000",
-            2
-          ],
-          [
-            "886",
-            2
-          ],
-          [
-            "3145",
-            1
-          ],
-          [
-            "16000",
-            1
-          ],
-          [
-            "155",
-            1
-          ],
-          [
-            "8841",
-            1
-          ],
-          [
-            "5000",
-            1
-          ]
-        ]
-      },
-      "losses": {
-        "total_mentions": 247,
-        "unique_values": 97,
-        "top_values": [
-          [
-            "2025",
-            70
-          ],
-          [
-            "28",
-            19
-          ],
-          [
-            "7.7",
-            11
-          ],
-          [
-            "2024",
-            7
-          ],
-          [
-            "3.5",
-            6
-          ],
-          [
-            "1",
-            4
-          ],
-          [
-            "17.2",
-            4
-          ],
-          [
-            "2026",
-            4
-          ],
-          [
-            "3600",
-            3
-          ],
-          [
-            "9",
-            3
-          ],
-          [
-            "2.7",
-            3
-          ],
-          [
-            "5000",
-            3
-          ],
-          [
-            "1.6",
-            3
-          ],
-          [
-            "3700",
-            3
-          ],
-          [
-            "6.3",
-            3
-          ]
-        ]
-      },
-      "relief_funds": {
-        "total_mentions": 136,
-        "unique_values": 34,
-        "top_values": [
-          [
-            "2025",
-            60
-          ],
-          [
-            "2026",
-            12
-          ],
-          [
-            "1",
-            11
-          ],
-          [
-            "5",
-            5
-          ],
-          [
-            "12",
-            5
-          ],
-          [
-            "28",
-            4
-          ],
-          [
-            "29",
-            4
-          ],
-          [
-            "2024",
-            3
-          ],
-          [
-            "63",
-            3
-          ],
-          [
-            "8",
-            2
-          ],
-          [
-            "9",
-            2
-          ],
-          [
-            "21",
-            2
-          ],
-          [
-            "27",
-            2
-          ],
-          [
-            "50000",
-            1
-          ],
-          [
-            "30000",
-            1
-          ]
-        ]
-      }
-    },
-    "impact": {
-      "country": "Myanmar",
-      "start_year": 2016,
-      "start_month": 8,
-      "start_day": 24.0,
-      "disaster_type": "Earthquake",
-      "magnitude": 6.8,
-      "total_events_in_year_country": 1.0,
-      "total_deaths": 4.0,
-      "total_affected": 1152.0,
-      "population_exposed": 1152.0,
-      "total_damages_usd": 10000000.0,
-      "economic_damage_per_capita": 8680.555555555555
-    }
-  },
-  "Myanmar_2025_03_M7.7": {
-    "temporal": {
-      "event_date": "2025-03-01",
-      "media_peak_date": "2025-04-04",
-      "media_peak_daily_volume": 8,
-      "delta_t_days": 34
-    },
-    "sentiment": {
-      "headline_sentiment_mean": -0.08296832579185522,
-      "headline_sentiment_std": 0.3236628305834255,
-      "headline_sentiment_n": 221
-    },
-    "top_entities": {
-      "org_like_top20": [
-        [
-          "Myanmar",
-          445
-        ],
-        [
-          "PDF",
-          150
-        ],
-        [
-          "Format News",
-          67
-        ],
-        [
-          "Press Release",
-          45
-        ],
-        [
-          "UNHCR",
-          25
-        ],
-        [
-          "Thailand",
-          19
-        ],
-        [
-          "MB",
-          19
-        ],
-        [
-          "WFP",
-          14
-        ],
-        [
-          "Indonesia",
-          14
-        ],
-        [
-          "UN",
-          12
-        ],
-        [
-          "GDACS",
-          11
-        ],
-        [
-          "USGS",
-          11
-        ],
-        [
-          "Myanmar Format News",
-          10
-        ],
-        [
-          "Rohingya",
-          10
-        ],
-        [
-          "un",
-          9
-        ],
-        [
-          "Format Situation Report",
-          9
-        ],
-        [
-          "MIMU",
-          8
-        ],
-        [
-          "English",
-          8
-        ],
-        [
-          "UNFPA",
-          7
-        ],
-        [
-          "Format Assessment Source",
-          7
-        ]
-      ],
-      "numeric_like_top20": [
-        [
-          "7.7",
-          26
-        ],
-        [
-          "1",
-          26
-        ],
-        [
-          "28",
-          22
-        ],
-        [
-          "2",
-          22
-        ],
-        [
-          "4",
-          18
-        ],
-        [
-          "8",
-          18
-        ],
-        [
-          "10",
-          18
-        ],
-        [
-          "3",
-          16
-        ],
-        [
-          "11",
-          16
-        ],
-        [
-          "18",
-          16
-        ],
-        [
-          "21",
-          16
-        ],
-        [
-          "30",
-          16
-        ],
-        [
-          "6",
-          15
-        ],
-        [
-          "22",
-          15
-        ],
-        [
-          "23",
-          15
-        ],
-        [
-          "27",
-          15
-        ],
-        [
-          "12",
-          14
-        ],
-        [
-          "5",
-          13
-        ],
-        [
-          "13",
-          13
-        ],
-        [
-          "31",
-          13
-        ]
-      ]
-    },
-    "entity_classification": {
-      "ngo": [
-        [
-          "UNHCR",
-          25
-        ],
-        [
-          "WFP",
-          14
-        ],
-        [
-          "UNFPA",
-          7
-        ],
-        [
-          "Myanmar UNFPA Situation Report",
-          5
-        ],
-        [
-          "Format Situation Report Source UNFPA",
-          5
-        ],
-        [
-          "Format Situation Report Source AHA Centre Posted",
-          4
-        ],
-        [
-          "OCHA",
-          4
-        ],
-        [
-          "UNFPA Situation Report",
-          4
-        ],
-        [
-          "Format Situation Report Sources Health Cluster WHO Posted",
-          4
-        ],
-        [
-          "Press Release Source ICRC",
-          4
-        ],
-        [
-          "Press Release Source UNFPA",
-          3
-        ],
-        [
-          "Myanmar Red Cross Society",
-          3
-        ],
-        [
-          "Save the Children",
-          3
-        ],
-        [
-          "AHA Centre",
-          2
-        ],
-        [
-          "UNFPA Prioritizes Urgent Health and Protection Support",
-          2
-        ]
-      ],
-      "government": [
-        [
-          "GDACS",
-          11
-        ],
-        [
-          "USGS",
-          11
-        ],
-        [
-          "ASEAN",
-          4
-        ],
-        [
-          "The ASEAN Parliamentarians for Human Rights",
-          2
-        ],
-        [
-          "Copernicus EMSR",
-          2
-        ],
-        [
-          "the Government of Japan",
-          2
-        ],
-        [
-          "the Ministry of Land, Infrastruct",
-          1
-        ],
-        [
-          "the Government of",
-          1
-        ],
-        [
-          "the Ministry of Land, Infrastructure",
-          1
-        ]
-      ],
-      "private": []
-    },
-    "extracted_impact": {
-      "deaths": {
-        "total_mentions": 31,
-        "unique_values": 24,
-        "top_values": [
-          [
-            "35500",
-            3
-          ],
-          [
-            "3600",
-            2
-          ],
-          [
-            "3700",
-            2
-          ],
-          [
-            "40000",
-            2
-          ],
-          [
-            "3800",
-            2
-          ],
-          [
-            "886",
-            2
-          ],
-          [
-            "4200",
-            1
-          ],
-          [
-            "155",
-            1
-          ],
-          [
-            "16753",
-            1
-          ],
-          [
-            "5000",
-            1
-          ],
-          [
-            "4800",
-            1
-          ],
-          [
-            "5742",
-            1
-          ],
-          [
-            "10133",
-            1
-          ],
-          [
-            "3725",
-            1
-          ],
-          [
-            "17",
-            1
-          ]
-        ]
-      },
-      "losses": {
-        "total_mentions": 140,
-        "unique_values": 68,
-        "top_values": [
-          [
-            "2025",
-            39
-          ],
-          [
-            "28",
-            6
-          ],
-          [
-            "2024",
-            6
-          ],
-          [
-            "7.7",
-            5
-          ],
-          [
-            "1",
-            4
-          ],
-          [
-            "17.2",
-            4
-          ],
-          [
-            "2026",
-            4
-          ],
-          [
-            "5000",
-            3
-          ],
-          [
-            "3600",
-            2
-          ],
-          [
-            "3700",
-            2
-          ],
-          [
-            "1.23",
-            2
-          ],
-          [
-            "3800",
-            2
-          ],
-          [
-            "2021",
-            2
-          ],
-          [
-            "407",
-            2
-          ],
-          [
-            "155",
-            2
-          ]
-        ]
-      },
-      "relief_funds": {
-        "total_mentions": 92,
-        "unique_values": 24,
-        "top_values": [
-          [
-            "2025",
-            41
-          ],
-          [
-            "2026",
-            12
-          ],
-          [
-            "1",
-            5
-          ],
-          [
-            "5",
-            4
-          ],
-          [
-            "29",
-            4
-          ],
-          [
-            "28",
-            3
-          ],
-          [
-            "63",
-            3
-          ],
-          [
-            "8",
-            2
-          ],
-          [
-            "21",
-            2
-          ],
-          [
-            "27",
-            2
-          ],
-          [
-            "50000",
-            1
-          ],
-          [
-            "100000",
-            1
-          ],
-          [
-            "1080",
-            1
-          ],
-          [
-            "4200",
-            1
-          ],
-          [
-            "500000",
-            1
-          ]
-        ]
-      }
-    },
-    "impact": {
-      "country": "Myanmar",
-      "start_year": 2025,
-      "start_month": 3,
-      "start_day": null,
-      "disaster_type": "Earthquake",
-      "magnitude": 7.7,
-      "total_events_in_year_country": 1.0,
-      "total_deaths": 3820.0,
-      "total_affected": 1355104.0,
-      "population_exposed": 1355104.0,
-      "total_damages_usd": 11000000000.0,
-      "economic_damage_per_capita": 8117.45814343401
     }
   }
 }

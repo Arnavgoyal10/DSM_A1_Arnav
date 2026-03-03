@@ -153,7 +153,6 @@ def extract_entities(nlp, text: str) -> List[Tuple[str, str]]:
             ents.append((ent.text.strip(), ent.label_))
     return ents
 
-
 NGO_KEYWORDS = {
     "red cross",
     "ifrc",
@@ -197,10 +196,19 @@ NGO_KEYWORDS = {
     "feinstein",
     "nts centre",
     "ecw",
-    "uNAIDS",
+    "unaids",
     "unesco",
     "undrr",
+    "afghan red crescent",
+    "arcs",
+    "dacaar",
+    "madera",
+    "arep",
+    "unama",
+    "msf",
+    "doctors without borders",
 }
+
 GOVT_KEYWORDS = {
     "government",
     "bnpb",
@@ -218,7 +226,13 @@ GOVT_KEYWORDS = {
     "provincial",
     "regency",
     "district",
+    "andma",
+    "afghanistan national disaster management authority",
+    "islamic emirate",
+    "taliban",
+    "ndma",
 }
+
 PRIVATE_KEYWORDS = {
     "private",
     "company",
